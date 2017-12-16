@@ -32,11 +32,11 @@
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs" target="_blank">Documentation</a>
+                    <a href="{{ route('gitdocumentation') }}" target="_blank">Documentation</a>
                     <a href="{{ route('github') }}" target="_blank">GitHub</a>
                 </div>
 
-                <div class="text-center">
+                <div class="text-center margin-top-3">
                     <label class="btn btn-default" for="file-selector">
                         <input id="file-selector" type="file" style="display:none;">
                         upload a file

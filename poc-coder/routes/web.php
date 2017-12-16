@@ -15,6 +15,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/github', function () {
+Route::get('/github', function ()
+{
     return redirect('https://github.com/RobLui/proof_of_concept');
-})->name("github");
+}
+)
+->name("github")
+;
+
+Route::get('/documentation', function ()
+{
+    return redirect('https://github.com/RobLui/proof_of_concept/blob/master/info.md');
+}
+)
+    ->name("gitdocumentation")
+;
