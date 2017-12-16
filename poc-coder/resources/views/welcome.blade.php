@@ -10,7 +10,7 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
         <link rel="stylesheet" type="text/css" href="{{ asset('sass/custom.css') }}">
-
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
 
     </head>
     <body>
@@ -28,17 +28,23 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    OBJECTORIENTORIZER
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="https://laravel.com/docs" target="_blank">Documentation</a>
+                    <a href="{{ route('github') }}" target="_blank">GitHub</a>
                 </div>
+
+                <div class="text-center">
+                    <label class="btn btn-default" for="file-selector">
+                        <input id="file-selector" type="file" style="display:none;">
+                        upload a file
+                    </label>
+                </div>
+
             </div>
+
         </div>
     </body>
 </html>

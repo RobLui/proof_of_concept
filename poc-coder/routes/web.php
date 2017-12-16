@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/github', function () {
+    return redirect('https://github.com/RobLui/proof_of_concept');
+})->name("github");
