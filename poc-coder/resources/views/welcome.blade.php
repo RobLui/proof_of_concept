@@ -33,12 +33,12 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    OBJECTORIENTORIZER
+                    OBJECT ORIENTIZER
                 </div>
 
                 <div class="links">
-                    <a href="{{ route('gitdocumentation') }}" target="_blank">Documentation</a>
-                    <a href="{{ route('github') }}" target="_blank">GitHub</a>
+                    {{--<a href="{{ route('gitdocumentation') }}" target="_blank">Documentation</a>--}}
+                    {{--<a href="{{ route('github') }}" target="_blank">GitHub</a>--}}
                 </div>
 
                 @include('partials.fileupload')
