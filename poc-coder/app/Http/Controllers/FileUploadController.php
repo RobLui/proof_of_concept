@@ -49,9 +49,9 @@ class FileUploadController extends Controller
             $classnames = $this->get_class_names($data);
 
             // Split contents in array based on a delimiter
-//            $names = explode("public function ", $classnames);
+            // $names = explode("public function ", $classnames);
             $names = explode("\n ", $classnames);
-//            dd($names);
+            // dd($names);
 
         }
         return view('filehandler',compact('data','total','eachWord','methods','classnames','names'));
