@@ -41,22 +41,19 @@ class FileUploadController extends Controller
             // You receive an array with objects: -> word en -> count
             $eachWord = $wordcounter->countEachWord();
 
-            // Get the defined functions from   the uploaded file
+            // Get the defined functions from the uploaded file
             $methods = $this->get_methods($contents);
 
-            // dd($data);
-            $classnames = $this->get_class_names();
+            // Get the defined class names from within the uploaded file
+            $classnames = $this->get_class_names($data);
             dd($classnames);
 
         }
-        return view('filehandler',compact('data','total','eachWord','methods'));
+        return view('filehandler',compact('data','total','eachWord','methods','classnames'));
     }
 
-    public function get_class_names() {
-        $classes = get_declared_classes();
-        $diff = array_diff(get_declared_classes(), $classes);
-        $class = reset($diff);
-
+    public function get_class_names($filename) {
+        $classes = $filename.implode(get_declared_classes());
         return $classes;
     }
 

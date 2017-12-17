@@ -10,7 +10,12 @@
 
             {{-- OPTIONS --}}
             <div class="col-md-6 full-display full-height col-md-offset-3" id="options">
-                <h2 class="margin-top-3">OPTIONS</h2>
+                <h2 class="margin-top-3">CLASSNAMES</h2>
+                @if(!empty($classnames))
+                    @foreach($classnames as $c)
+                        {{ $c }}
+                    @endforeach
+                @endif
                 {{----}}
                 <h2 class="margin-top-3">METHODS</h2>
                 @if(!empty($methods))
