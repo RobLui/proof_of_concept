@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "6fa1826591bd9b5c0023e604fac9dd62",
+    "content-hash": "5d84604b6482a0df146d66b9798f4a42",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -750,6 +750,49 @@
                 "storage"
             ],
             "time": "2017-08-06T17:41:04+00:00"
+        },
+        {
+            "name": "malahierba-lab/word-counter",
+            "version": "0.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/malahierba-lab/word-counter.git",
+                "reference": "006ac6d872fa2201f8a8f439fb8abb0401857d67"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/malahierba-lab/word-counter/zipball/006ac6d872fa2201f8a8f439fb8abb0401857d67",
+                "reference": "006ac6d872fa2201f8a8f439fb8abb0401857d67",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "5.*",
+                "php": ">=5.5.18"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Malahierba\\WordCounter\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "malahierba team",
+                    "email": "lab@malahierba.cl",
+                    "homepage": "http://malahierba.cl"
+                }
+            ],
+            "description": "Laravel simple tool for word counting tasks",
+            "keywords": [
+                "counter",
+                "laravel",
+                "words"
+            ],
+            "time": "2015-11-17T01:30:33+00:00"
         },
         {
             "name": "monolog/monolog",

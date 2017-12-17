@@ -6,6 +6,7 @@ use function compact;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Input;
+use Malahierba\WordCounter\WordCounter;
 use function view;
 
 class FileUploadController extends Controller
@@ -15,12 +16,28 @@ class FileUploadController extends Controller
 
         if ($req->hasFile('upload-file'))
         {
+            // Define the uploaded file
             $contents = Input::file('upload-file');
+
+            // Get the content from the uploaded file
             $data = File::get($contents);
-            dd($data);
+
+            // Init new wordCounter
+            $wordcounter = new WordCounter();
+
+            // Load string to analyze
+            $wordcounter->load($data);
+
+            // Count all words inside the file (analyzed string)
+            $total = $wordcounter->countTotalWords();
+
+            // Count each word
+            // You receive an array with objects: -> word en -> count
+            $eachWord = $wordcounter->countEachWord();
+            // dd($data);
         }
 
-        return view('filehandler',compact('data'));
+        return view('filehandler',compact('data','total','eachWord'));
     }
 
 }
