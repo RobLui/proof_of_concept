@@ -69,10 +69,16 @@ html, body {
   background: #699 !important;
   color: white; }
 
+.pink {
+  background: pink !important;
+  color: black;
+  font-weight: 800; }
+
 .color-white {
   color: #ffffff !important; }
-  .color-white :hover {
-    color: orange; }
+
+.hover:hover {
+  color: #FF8300 !important; }
 
 .navbar-nav {
   float: none !important;

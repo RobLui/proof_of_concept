@@ -1,5 +1,6 @@
 $blue: #036;
 $green: #699;
+$pink: pink;
 
 html, body {
   background-color: #fff;
@@ -91,11 +92,18 @@ html, body {
   color: white;
 }
 
+.pink {
+  background: $pink !important;
+  color: black;
+  font-weight: 800;
+}
+
 .color-white {
   color: #ffffff !important;
-  :hover {
-    color: orange;
-  }
+}
+
+.hover:hover {
+  color: #FF8300 !important;
 }
 
 .navbar-nav {

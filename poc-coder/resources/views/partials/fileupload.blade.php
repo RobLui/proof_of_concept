@@ -10,7 +10,7 @@
     </div>
 
     <div class="text-center margin-top-3">
-        {{ Form::submit('insert', array('class' => 'btn btn-success')) }}
+        {{ Form::submit('Start Checker', array('class' => 'btn btn-success')) }}
     </div>
 
 {!! Form::close() !!}
