@@ -48,7 +48,10 @@ class FileUploadController extends Controller
             // Get the defined class names from within the uploaded file
             $classnames = $this->get_class_names($data);
 
-            $names = explode("\n", $classnames);
+            // Split contents in array based on a delimiter
+//            $names = explode("public function ", $classnames);
+            $names = explode("\n ", $classnames);
+//            dd($names);
 
         }
         return view('filehandler',compact('data','total','eachWord','methods','classnames','names'));

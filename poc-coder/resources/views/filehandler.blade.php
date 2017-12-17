@@ -8,31 +8,53 @@
 
         @if(!empty($data))
 
-            <div class="col-md-6 full-display full-height col-md-offset-3" id="options">
-                {{-- OPTIONS --}}
-                <h2 class="margin-top-3">CLASSNAMES</h2>
-                @if(!empty($classnames))
-                    {{ $classnames }}
-                @endif
+            <div class="col-md-6 full-display full-height col-md-offset-3">
 
-                {{-- NAMES --}}
-                <h2 class="margin-top-3">NAMES</h2>
-                @if(!empty($names))
-                    @foreach($names as $n)
-                        {{ $n }}
-                        <br>
-                    @endforeach
-                @endif
+                <div class="col-md-12 full-display full-height" id="classnames">
+                    {{-- CLASSNAMES --}}
+                    <h2 class="margin-top-3">CLASSNAMES</h2>
+                    @if(!empty($classnames))
+                      <p>{{ $classnames }}</p>
+                    @endif
+                </div>
 
-                {{-- METHODS --}}
-                <h2 class="margin-top-3">METHODS</h2>
-                @if(!empty($methods))
-                    @foreach($methods as $m)
-                        {{ $m }}
-                    @endforeach
-                @endif
+                <div class="col-md-12 full-display ">
+                </div>
+                <div class="col-md-12 full-display full-height">
+                </div>
+                <div class="col-md-12 full-display ">
+                </div>
+
+
+                <div class="col-md-12 full-display full-height" id="names">
+                    {{-- NAMES --}}
+                    <h2 class="margin-top-3">NAMES</h2>
+                    @if(!empty($names))
+                        @foreach($names as $n)
+                            <p>{{ $n }} <br></p>
+                        @endforeach
+                    @endif
+                </div>
+
+                {{-- OTHER --}}
+                <div class="col-md-12 full-display ">
+                </div>
+
+
+                <div class="col-md-12 full-display full-height" id="methods">
+                    {{-- METHODS --}}
+                    <h2 class="margin-top-3">METHODS</h2>
+                    @if(!empty($methods))
+                        @foreach($methods as $m)
+                            <p> {{ $m }} </p>
+                        @endforeach
+                    @endif
+                </div>
+
             </div>
     </div>
+
+    <div class="col-md-12">
             {{-- FILE CONTENTS --}}
             <div class="col-md-6 full-display col-md-offset-3 full-height" id="raw-content">
                 <h2 class="margin-top-3">RAW CONTENT</h2>
@@ -60,7 +82,7 @@
                 <a href="{{ route('welcome') }}" class="btn btn-info">&larr; back to main page</a>
             </div>
         @endif
-
-    </div>
+        </div>
+</div>
 
 @endsection
