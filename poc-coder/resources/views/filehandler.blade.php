@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="col-md-12 margin-top-3">
+    <div class="col-md-12 full-display">
 
         {{-- FILE CONTENTS --}}
         <div class="col-md-6 col-md-offset-3">
@@ -21,6 +21,6 @@
             </ul>
         </div>
 
-        </div>
+    </div>
 
 @endsection

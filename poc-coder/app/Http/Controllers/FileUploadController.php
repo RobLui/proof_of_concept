@@ -25,6 +25,10 @@ class FileUploadController extends Controller
             // Init new wordCounter
             $wordcounter = new WordCounter();
 
+            // Edited standard config protected to public to unset true's, enabling for code checking words
+            $wordcounter->remove_html_tags = false;
+            $wordcounter->remove_scripts = false;
+
             // Load string to analyze
             $wordcounter->load($data);
 

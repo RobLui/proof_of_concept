@@ -1,1 +1,43 @@
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. consectetur consectetur consectetur
+<?php
+
+namespace App\Http\Controllers;
+
+use function compact;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Input;
+use Malahierba\WordCounter\WordCounter;
+use function view;
+
+class FileUploadController extends Controller
+{
+
+    public function handle(Request $req) {
+
+        if ($req->hasFile('upload-file'))
+        {
+            // Define the uploaded file
+            $contents = Input::file('upload-file');
+
+            // Get the content from the uploaded file
+            $data = File::get($contents);
+
+            // Init new wordCounter
+            $wordcounter = new WordCounter();
+
+            // Load string to analyze
+            $wordcounter->load($data);
+
+            // Count all words inside the file (analyzed string)
+            $total = $wordcounter->countTotalWords();
+
+            // Count each word
+            // You receive an array with objects: -> word en -> count
+            $eachWord = $wordcounter->countEachWord();
+            // dd($data);
+        }
+
+        return view('filehandler',compact('data','total','eachWord'));
+    }
+
+}
