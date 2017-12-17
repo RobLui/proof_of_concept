@@ -46,6 +46,9 @@ html, body {
 .margin-top-3 {
   margin-top: 3em; }
 
+.margin-top-6 {
+  margin-top: 6em; }
+
 .margin-bottom-1 {
   margin-bottom: 1em; }
 
@@ -65,5 +68,19 @@ html, body {
 .green {
   background: #699 !important;
   color: white; }
+
+.color-white {
+  color: #ffffff !important; }
+  .color-white :hover {
+    color: orange; }
+
+.navbar-nav {
+  float: none !important;
+  margin: 0 auto;
+  display: block;
+  text-align: center; }
+  .navbar-nav > li {
+    display: inline-block !important;
+    float: none !important; }
 
 /*# sourceMappingURL=custom.css.map */
