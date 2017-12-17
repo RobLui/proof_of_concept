@@ -3,7 +3,9 @@
 // STANDARD
     Route::get('/', function () {
         return view('welcome');
-    });
+    })
+    ->name('welcome')
+    ;
 
 // GITHUB
     Route::get('/github', function () {return redirect('https://github.com/RobLui/proof_of_concept');})

@@ -9,9 +9,14 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+
+        <!-- CSS -->
         <link rel="stylesheet" type="text/css" href="{{ asset('sass/custom.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
 
+        <!-- SCRIPTS -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="{{ asset('js/custom.js') }}"></script>
     </head>
     <body>
         <div class="flex-center position-ref full-height">
@@ -36,24 +41,7 @@
                     <a href="{{ route('github') }}" target="_blank">GitHub</a>
                 </div>
 
-                {!!  Form::open(['route' => 'filehandler','method' => 'post', 'files' => true]) !!}
-
-                    <div class="text-center margin-top-3">
-                        <label class="btn btn-default" for="file-selector">
-                            <input name="upload-file" id="file-selector" type="file" style="display:none;">
-                            upload a file
-                        </label>
-                    </div>
-
-                <div class="text-center margin-top-3">
-                    {{ Form::submit('insert', array('class' => 'btn btn-success')) }}
-                </div>
-
-                {!! Form::close() !!}
-
-
-
-
+                @include('partials.fileupload')
             </div>
 
         </div>

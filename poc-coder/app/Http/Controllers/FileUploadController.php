@@ -40,7 +40,6 @@ class FileUploadController extends Controller
             $eachWord = $wordcounter->countEachWord();
             // dd($data);
         }
-
         return view('filehandler',compact('data','total','eachWord'));
     }
 

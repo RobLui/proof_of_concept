@@ -28,7 +28,7 @@
             </div>
         @endif
 
-        <div class="content margin-top-3">
+        <div class="content full-height">
             @yield('content')
         </div>
 
