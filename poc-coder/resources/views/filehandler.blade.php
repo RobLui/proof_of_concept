@@ -11,6 +11,9 @@
             {{-- OPTIONS --}}
             <div class="col-md-6 full-display full-height col-md-offset-3" id="options">
                 <h2 class="margin-top-3">OPTIONS</h2>
+                {{----}}
+                <h2 class="margin-top-3">FUNCTIONS</h2>
+                {{ $functions }}
             </div>
 
             {{-- FILE CONTENTS --}}
