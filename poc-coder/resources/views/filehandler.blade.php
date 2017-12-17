@@ -8,16 +8,16 @@
             {{-- FILE CONTENTS --}}
             <div class="col-md-6 full-display col-md-offset-3">
                 <h2>Inserted file raw content:</h2>
-                <p class="margin-top-3"> {{ $data }} </p>
+                <p class="margin-top-3 text-left"> {{ $data }} </p>
             </div>
 
             {{-- DETAILS FROM FILE CONTENTS --}}
-            <div class="col-md-6 col-md-offset-3">
+            <div class="col-md-6 col-md-offset-3 margin-bottom-3">
                 <h2>Statistics</h2>
                 <ul class="list-group margin-top-3">
                     <li class="col-md-12 list-group-item">Totaal aantal woorden: {{ $total }}</li>
                     @foreach($eachWord as $item)
-                        <li class="col-md-3 list-group-item">{{ $item->word }} = {{ $item->count }} keer</li>
+                    <li class="col-md-4 list-group-item {{ $item->count > 2 ? 'green' : 'blue'  }}">{{ $item->word }} = <span>{{ $item->count }} keer</span></li>
                     @endforeach
                 </ul>
             </div>
