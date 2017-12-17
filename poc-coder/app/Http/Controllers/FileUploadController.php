@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use function compact;
-use function get_defined_functions;
+use function get_declared_classes;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Input;
 use Malahierba\WordCounter\WordCounter;
+use function compact;
+use function get_class_methods;
 use function view;
 
 class FileUploadController extends Controller
@@ -40,18 +41,28 @@ class FileUploadController extends Controller
             // You receive an array with objects: -> word en -> count
             $eachWord = $wordcounter->countEachWord();
 
-            // Get the defined functions from the uploaded file
-            $functions = $this->defined_function($contents);
-//            dd($functions);
+            // Get the defined functions from   the uploaded file
+            $methods = $this->get_methods($contents);
 
             // dd($data);
+            $classnames = $this->get_class_names();
+            dd($classnames);
+
         }
-        return view('filehandler',compact('data','total','eachWord','functions'));
+        return view('filehandler',compact('data','total','eachWord','methods'));
     }
 
-    public function defined_function($filename)
+    public function get_class_names() {
+        $classes = get_declared_classes();
+        $diff = array_diff(get_declared_classes(), $classes);
+        $class = reset($diff);
+
+        return $classes;
+    }
+
+    public function get_methods($filename)
     {
-        $this->filename = get_defined_functions();
-        return $filename;
+        $methods = get_class_methods($filename);
+        return $methods;
     }
 }

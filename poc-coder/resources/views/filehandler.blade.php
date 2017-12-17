@@ -12,8 +12,12 @@
             <div class="col-md-6 full-display full-height col-md-offset-3" id="options">
                 <h2 class="margin-top-3">OPTIONS</h2>
                 {{----}}
-                <h2 class="margin-top-3">FUNCTIONS</h2>
-                {{ $functions }}
+                <h2 class="margin-top-3">METHODS</h2>
+                @if(!empty($methods))
+                    @foreach($methods as $m)
+                        {{ $m }}
+                    @endforeach
+                @endif
             </div>
 
             {{-- FILE CONTENTS --}}
