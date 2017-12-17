@@ -36,12 +36,23 @@
                     <a href="{{ route('github') }}" target="_blank">GitHub</a>
                 </div>
 
+                {!!  Form::open(['route' => 'filehandler','method' => 'post', 'files' => true]) !!}
+
+                    <div class="text-center margin-top-3">
+                        <label class="btn btn-default" for="file-selector">
+                            <input name="upload-file" id="file-selector" type="file" style="display:none;">
+                            upload a file
+                        </label>
+                    </div>
+
                 <div class="text-center margin-top-3">
-                    <label class="btn btn-default" for="file-selector">
-                        <input id="file-selector" type="file" style="display:none;">
-                        upload a file
-                    </label>
+                    {{ Form::submit('insert', array('class' => 'btn btn-success')) }}
                 </div>
+
+                {!! Form::close() !!}
+
+
+
 
             </div>
 
