@@ -8,15 +8,23 @@
 
         @if(!empty($data))
 
-            {{-- OPTIONS --}}
             <div class="col-md-6 full-display full-height col-md-offset-3" id="options">
+                {{-- OPTIONS --}}
                 <h2 class="margin-top-3">CLASSNAMES</h2>
                 @if(!empty($classnames))
-                    @foreach($classnames as $c)
-                        {{ $c }}
+                    {{ $classnames }}
+                @endif
+
+                {{-- NAMES --}}
+                <h2 class="margin-top-3">NAMES</h2>
+                @if(!empty($names))
+                    @foreach($names as $n)
+                        {{ $n }}
+                        <br>
                     @endforeach
                 @endif
-                {{----}}
+
+                {{-- METHODS --}}
                 <h2 class="margin-top-3">METHODS</h2>
                 @if(!empty($methods))
                     @foreach($methods as $m)
@@ -24,7 +32,7 @@
                     @endforeach
                 @endif
             </div>
-
+    </div>
             {{-- FILE CONTENTS --}}
             <div class="col-md-6 full-display col-md-offset-3 full-height" id="raw-content">
                 <h2 class="margin-top-3">RAW CONTENT</h2>

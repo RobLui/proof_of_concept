@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use function explode;
 use function get_declared_classes;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
@@ -42,18 +43,19 @@ class FileUploadController extends Controller
             $eachWord = $wordcounter->countEachWord();
 
             // Get the defined functions from the uploaded file
-            $methods = $this->get_methods($contents);
+            $methods = $this->get_methods($data);
 
             // Get the defined class names from within the uploaded file
             $classnames = $this->get_class_names($data);
-            dd($classnames);
+
+            $names = explode("\n", $classnames);
 
         }
-        return view('filehandler',compact('data','total','eachWord','methods','classnames'));
+        return view('filehandler',compact('data','total','eachWord','methods','classnames','names'));
     }
 
     public function get_class_names($filename) {
-        $classes = $filename.implode(get_declared_classes());
+        $classes = $filename.implode(get_declared_classes())[0];
         return $classes;
     }
 
