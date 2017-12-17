@@ -11,3 +11,7 @@ http://php.net/manual/en/function.str-replace.php
 
 ## FORCE CODING STANDARDS
 https://matthewdaly.co.uk/blog/2017/03/15/enforcing-a-coding-standard-with-php-codesniffer/
+
+## BLOG OF "DIRTY" TO CLEAN CODE 
+https://dev.to/gonedark/a-month-of-clean-code-tips-709
+https://dev.to/gonedark/writing-clean-code-part-2-9fn
