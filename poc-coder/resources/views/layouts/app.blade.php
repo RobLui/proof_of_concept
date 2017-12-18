@@ -8,10 +8,15 @@
 
     <title>Proof of Concept</title>
 
-    <!-- Fonts -->
+    <!-- FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+
+    <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="{{ asset('sass/custom.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
+
+    <!-- JS / JQUERY -->
+    <script src="{{ asset('js/custom.js') }}"></script>
 
 </head>
 
@@ -33,6 +38,7 @@
         </div>
 
     </div>
+<script src="{{ asset('js/custom.js') }}"></script>
 </body>
 
 </html>

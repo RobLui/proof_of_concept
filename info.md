@@ -70,3 +70,8 @@ https://www.google.be/search?q=find+word+in+array&oq=find+word+in+array&aqs=chro
 http://php.net/manual/en/function.get-class-methods.php
 https://www.jetbrains.com/help/phpstorm/code-inspection.html
 https://stackoverflow.com/questions/13795789/check-if-string-contains-word-in-array
+https://stackoverflow.com/questions/7959247/php-test-if-number-is-odd-or-even
+
+## LOL SOURCE OOP FUN CODE EXAMPLES
+https://www.reddit.com/r/badcode/
+https://www.reddit.com/r/PHP/comments/1lpgqk/worst_practices/?st=jbbksnex&sh=8888de88
