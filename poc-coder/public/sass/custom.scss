@@ -55,8 +55,13 @@ html, body {
   margin-bottom: 30px;
 }
 
+// MARGIN
 .margin-top-1 {
   margin-top: 1em;
+}
+
+.margin-top-2 {
+  margin-top: 2em;
 }
 
 .margin-top-3 {
@@ -71,9 +76,24 @@ html, body {
   margin-bottom: 1em;
 }
 
+.margin-bottom-2 {
+  margin-bottom: 2em;
+}
+
 .margin-bottom-3 {
   margin-bottom: 3em;
 }
+
+// PADDING
+
+.padding-top-1 {
+  padding-top: 1em;
+}
+
+.padding-bottom-1 {
+  padding-bottom: 1em;
+}
+
 
 .full-display {
   height: 100%;
@@ -115,4 +135,12 @@ html, body {
     display: inline-block !important;;
     float:none !important;
   }
+}
+
+.odd {
+  background: $blue;
+}
+
+.even {
+  background: $green;
 }

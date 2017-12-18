@@ -29,8 +29,19 @@
                     {{-- NAMES --}}
                     <h2 class="margin-top-3">SPLITTED CLASSNAMES </h2>
                     @if(!empty($classnames))
+
+                        {{-- SET VARIABLE + HIDE IT --}}
+                        <div class="hide">{!! $number = 0 !!}</div>
+
                         @foreach($classnames as $n)
-                            <p>{{ $n }} <br></p>
+                            {{--{{ dump($number) }}--}}
+                            <div class="col-md-12 color-white padding-top-1 padding-bottom-1 {!! $number % 2 == 0 ? 'odd' : 'even'  !!}">
+
+                                {{-- UP VARIABLE + HIDE IT --}}
+                                <div class="hide">{!! $number++ !!}}</div>
+
+                                <p>{{ $n }} <br></p>
+                            </div>
                         @endforeach
                     @endif
                 </div>
