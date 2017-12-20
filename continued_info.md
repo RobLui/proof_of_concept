@@ -15,3 +15,8 @@ https://matthewdaly.co.uk/blog/2017/03/15/enforcing-a-coding-standard-with-php-c
 ## BLOG OF "DIRTY" TO CLEAN CODE 
 https://dev.to/gonedark/a-month-of-clean-code-tips-709
 https://dev.to/gonedark/writing-clean-code-part-2-9fn
+
+
+# WORDPRESS ACCOUNT MADE + SETUP FOR PLUGINS TO DOWNLOAD (SINCE WP ISN'T OBJECT ORIENTED?)
+https://poclocal.wordpress.com/
+-> FAIL ! You cannot download wordpress plugins on a free tier. L0L.
