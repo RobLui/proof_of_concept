@@ -43,7 +43,7 @@ Refactoring other people code
 - https://www.daniweb.com/programming/web-development/threads/422538/how-to-convert-it-into-object-oriented
 - http://www.perlmonks.org/?node_id=1124071
 
-## SOURCES +++
+## SOURCES ++
 
 - https://matthewdaly.co.uk/blog/2017/03/15/enforcing-a-coding-standard-with-php-codesniffer/
 - https://www.google.be/search?q=find+occurences+of+code+in+other+code&oq=find+occurences+of+code+in+other+code&aqs=chrome..69i57.7593j0j7&sourceid=chrome&ie=UTF-8
@@ -64,10 +64,18 @@ Refactoring other people code
 - https://www.google.be/search?q=find+word+in+array&oq=find+word+in+array&aqs=chrome..69i57.7031j0j7&sourceid=chrome&ie=UTF-8
 
 ## SOURCES +++
+
 - http://php.net/manual/en/function.get-class-methods.php
 - https://www.jetbrains.com/help/phpstorm/code-inspection.html
 - https://stackoverflow.com/questions/13795789/check-if-string-contains-word-in-array
 - https://stackoverflow.com/questions/7959247/php-test-if-number-is-odd-or-even
+
+## SOURCES ++++
+
+- https://www.jetbrains.com/help/phpstorm/structural-search-and-replace-examples.html
+- https://codereview.stackexchange.com/questions/157965/cms-controllers-from-procedural-to-object-oriented
+- **https://www.jstage.jst.go.jp/article/jcmsi/10/3/10_184/_pdf** -> PDF OVER ANALYSE & REFACTORING
+
 
 ## LOL SOURCE OOP FUN CODE EXAMPLES
 - https://www.reddit.com/r/badcode/
