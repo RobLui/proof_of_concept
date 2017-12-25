@@ -4,13 +4,13 @@
 
     @include('partials.navigation')
 
-    <div class="col-md-12 full-display">
+    <div class="col-sm-12 full-display">
 
         @if(!empty($data))
 
-            <div class="col-md-6 full-display full-height col-md-offset-3">
+            <div class="col-sm-6 full-display full-height col-sm-offset-3">
 
-                <div class="col-md-12 full-display full-height" id="raw-classnames">
+                <div class="col-sm-12 full-display full-height" id="raw-classnames">
                     {{-- CLASSNAMES --}}
                     <h2 class="margin-top-3 margin-bottom-2">RAW CLASSNAMES</h2>
                     @if(!empty($classnamesraw))
@@ -18,14 +18,14 @@
                     @endif
                 </div>
 
-                <div class="col-md-12 full-display ">
+                <div class="col-sm-12 full-display ">
                 </div>
-                <div class="col-md-12 full-display full-height">
+                <div class="col-sm-12 full-display full-height">
                 </div>
-                <div class="col-md-12 full-display ">
+                <div class="col-sm-12 full-display ">
                 </div>
 
-                <div class="col-md-12 full-display full-height" id="splitted-classnames">
+                <div class="col-sm-12 full-display full-height" id="splitted-classnames">
                     {{-- NAMES --}}
                     <h2 class="margin-top-3">SPLITTED CLASSNAMES </h2>
                     @if(!empty($classnames))
@@ -35,7 +35,7 @@
 
                         @foreach($classnames as $n)
                             {{--{{ dump($number) }}--}}
-                            <div class="col-md-12 color-white padding-top-1 padding-bottom-1 {!! $number % 2 == 0 ? 'odd' : 'even'  !!}">
+                            <div class="col-sm-12 color-white padding-top-1 padding-bottom-1 {!! $number % 2 == 0 ? 'odd' : 'even'  !!}">
 
                                 {{-- UP VARIABLE + HIDE IT --}}
                                 <div class="hide">{!! $number++ !!}}</div>
@@ -46,12 +46,15 @@
                     @endif
                 </div>
 
-                <div class="col-md-12 full-display ">
+                <div class="col-sm-12 full-display ">
                 </div>
-                <div class="col-md-12 full-display ">
+                <div class="col-sm-12 full-display ">
+                </div>
+                <div class="col-sm-12 full-display ">
                 </div>
 
-                <div class="col-md-12 full-display full-height" id="methods">
+
+                <div class="col-sm-12 full-display full-height" id="methods">
                     {{-- METHODS --}}
                     <h2 class="margin-top-3">(INHERITED) METHODS</h2>
                     @if(!empty($methods))
@@ -62,23 +65,23 @@
                 </div>
         </div>
 
-        <div class="col-md-12">
+        <div class="col-sm-12">
                 {{-- FILE CONTENTS --}}
-                <div class="col-md-6 full-display col-md-offset-3 full-height" id="raw-content">
+                <div class="col-sm-6 full-display col-sm-offset-3 full-height" id="raw-content">
                     <h2 class="margin-top-3">RAW CONTENT</h2>
                     <p class="margin-top-3 text-left block"> {{ $data }} </p>
                 </div>
 
-                <div class="col-md-6 full-display full-height col-md-offset-3">
+                <div class="col-sm-6 full-display full-height col-sm-offset-3">
                 </div>
 
                 {{-- DETAILS FROM FILE CONTENTS --}}
-                <div class="col-md-6 col-md-offset-3 margin-top-3 margin-bottom-3 full-height" id="splitted-statistics">
+                <div class="col-sm-6 col-sm-offset-3 margin-top-3 margin-bottom-3 full-height" id="splitted-statistics">
                     <h2 class="margin-top-3">SPLITTED STATISTICS</h2>
                     <ul class="list-group margin-top-3">
                         <li class="list-group-item pink">Totaal aantal woorden: {{ $total }}</li>
                         @foreach($eachWord as $item)
-                            <li class="col-md-4 list-group-item {{ $item->count > 2 ? 'green' : 'blue'  }}">{{ $item->word }} = <span>{{ $item->count }} keer</span></li>
+                            <li class="col-sm-4 list-group-item {{ $item->count > 2 ? 'green' : 'blue'  }}">{{ $item->word }} = <span>{{ $item->count }} keer</span></li>
                         @endforeach
                     </ul>
                 </div>
