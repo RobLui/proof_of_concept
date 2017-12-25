@@ -15,14 +15,18 @@ use function view;
 
 class FileUploadController extends Controller
 {
-
     public function handle(Request $req) {
 
         if ($req->hasFile('upload-file'))
         {
+            // Get the uploaded file out of the request
             $uploadedfile = $req->file('upload-file');
 
+            // Get the file size
             $filesize = $uploadedfile->getSize();
+
+            // Get the file extension (php,js,..)
+            $extension = $uploadedfile->getClientOriginalExtension();
 
             if ($filesize < 10000) {
 
@@ -36,8 +40,7 @@ class FileUploadController extends Controller
                 $wordcounter = new WordCounter();
 
                 // Edited standard config protected to public to unset true's, enabling for code checking words
-                $wordcounter->remove_html_tags = false;
-                $wordcounter->remove_scripts = false;
+                $wordcounter->remove_html_tags = false; $wordcounter->remove_scripts = false;
 
                 // Load string to analyze
                 $wordcounter->load($data);
@@ -45,8 +48,7 @@ class FileUploadController extends Controller
                 // Count all words inside the file (analyzed string)
                 $total = $wordcounter->countTotalWords();
 
-                // Count each word
-                // You receive an array with objects: -> word en -> count
+                // Count each word, you receive an array with objects: -> word en -> count
                 $eachWord = $wordcounter->countEachWord();
 
                 // Get the defined functions from the uploaded file
@@ -55,21 +57,16 @@ class FileUploadController extends Controller
                 // Get the defined class names from within the uploaded file
                 $classnamesraw = $this->get_class_names($data);
 
-                $filesize = $uploadedfile->getSize();
-
-                $classnamesraw = $this->get_class_names($data);
+                // Split contents in array based on a delimiter (\n)
+                 $classnames = explode("\n ", $classnamesraw);
 
                 // Split contents in array based on a delimiter (public function)
                 // $classnames = explode("public function ", $classnamesraw);
-
-                // Split contents in array based on a delimiter (\n)
-                 $classnames = explode("\n ", $classnamesraw);
             }
 
             else {
                 return back();
             }
-
         }
         return view('filehandler',compact('data','total','eachWord','methods','classnamesraw','classnames'));
     }

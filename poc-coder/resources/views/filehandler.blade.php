@@ -4,7 +4,6 @@
 
     @include('partials.navigation')
 
-    <div class="col-sm-12 full-display">
 
         @if(!empty($data))
 
@@ -94,6 +93,5 @@
             @endif
         </div>
 
-    </div>
 
 @endsection
