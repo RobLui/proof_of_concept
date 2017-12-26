@@ -1,17 +1,17 @@
   
   // FUNCTIE 1
   function TestFunctionOne() {
-    a = 3;
-    b = 2;
-    result = a * b;
+    var a = 3;
+    var b = 2;
+    var result = a * b;
     return result;
   }
   
   // REPEAT FUNCTION 1
   function TestFunctionTwo() {
-    c = 3;
-    d = 2;
-    result = c * d;
+    var c = 3;
+    var d = 2;
+    var result = c * d;
     return result;
   }
   
@@ -23,20 +23,20 @@
     return result;
   }
   
+  // SUM OF ALL
   function SumOfAll() {
-    a = this.TestFunctionOne();
-    b = this.TestFunctionTwo();
-    c = this.TestFunctionThree();
+    var a = this.TestFunctionOne();
+    var b = this.TestFunctionTwo();
+    var c = this.TestFunctionThree();
     return a + b + c; 
   }
   
   var f = this.SumOfAll();
   
+  console.log("TestFunctionOne = " + TestFunctionOne());
+  console.log("TestFunctionTwo = " + TestFunctionTwo());
+  console.log("TestFunctionThree = " + TestFunctionThree());
   console.log(f);
-  
-  console.log(TestFunctionOne());
-  console.log(TestFunctionTwo());
-  console.log(TestFunctionThree());
 
 
 

@@ -1,19 +1,18 @@
 
 // FUNCTIE READY FOR REUSING
 function TestFunctionOne(a,b) {
-  var result = a * b;
+  result = a * b;
   console.log(result)
   return result;
 }
-
+// SUM OF ALL
 function SumOfAll() {
-  var a = TestFunctionOne(2,3);
-  var b = TestFunctionOne(2,3);
-  var c = TestFunctionOne(2,3);
-  return a + b + c; 
+  a = TestFunctionOne(2,3);
+  b = TestFunctionOne(2,3);
+  c = TestFunctionOne(2,3);
+  result = a + b + c;
+  console.log(result);
+  return result;
 }
 
-var f = this.SumOfAll();
-console.log(f);
-
-
+this.SumOfAll();
