@@ -88,4 +88,5 @@ class FileUploadController extends Controller
         // dd($methods);
         return $methods;
     }
+
 }
