@@ -27,8 +27,9 @@ class FileUploadController extends Controller
 
             // Get the file extension (php,js,..)
             $extension = $uploadedfile->getClientOriginalExtension();
-
-            if ($filesize < 10000) {
+            dd($extension);
+            
+            if ($filesize < 10000 && $extension == "js") {
 
                 // Define the uploaded file
                 $contents = Input::file('upload-file');
