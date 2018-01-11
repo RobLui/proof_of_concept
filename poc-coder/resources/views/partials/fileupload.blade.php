@@ -8,19 +8,24 @@
             <span id="uploadtext">upload a file</span>
         </label>
 
-        <div class="col-md-12">
-            <div class="margin-bottom-1"></div>
+        <div class="col-sm-12 margin-top-2 margin-bottom-3">
+        <h2>STEP 2</h2>
+            <div class="col-sm-4 col-sm-offset-2">
+                <label for="sort_file" class="btn btn-default">Choose a filetype</label>
+            </div>
+            <div class="col-sm-6">
+                <select class="col-sm-6 pull-left" name="sort_file" id="sort_file">
+                    <option value="js">JS</option>
+                    <option value="php">PHP</option>
+                </select>
+            </div>
         </div>
 
-        <h2>STEP 2</h2>
+        <h2>STEP 3</h2>
         <div class="text-center">
             {{ Form::submit('Start Checker', array('class' => 'col-md-6 col-md-offset-3 btn btn-success')) }}
         </div>
     {!! Form::close() !!}
 
-    <div class="text-center col-md-12">
-        <h2>STEP 3</h2>
-        <div class="col-md-6 col-md-offset-3 btn btn-danger disabled">Examine OOP Options</div>
-    </div>
 
 </div>
