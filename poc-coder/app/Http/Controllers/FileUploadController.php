@@ -15,12 +15,12 @@ use function view;
 
 class FileUploadController extends Controller
 {
-    public function handle(Request $req) {
+    public function handle(Request $req)
+    {
 
-        $max_suggested  = 5000;
+        $max_suggested = 5000;
 
-        if ($req->hasFile('upload-file'))
-        {
+        if ($req->hasFile('upload-file')) {
             // Get the uploaded file out of the request
             $uploadedfile = $req->file('upload-file');
 
@@ -29,9 +29,10 @@ class FileUploadController extends Controller
 
             // Get the file extension (php,js,..)
             $extension = $uploadedfile->getClientOriginalExtension();
-//            dd($extension);
 
-            if ($filesize < $max_suggested*2 && $extension == "js") {
+            // dd($extension);
+
+            if ($filesize < $max_suggested * 2 && ($extension == 'js' || $extension = 'php')) {
 
                 // Define the uploaded file
                 $contents = Input::file('upload-file');
@@ -43,7 +44,8 @@ class FileUploadController extends Controller
                 $wordcounter = new WordCounter();
 
                 // Edited standard config protected to public to unset true's, enabling for code checking words
-                $wordcounter->remove_html_tags = false; $wordcounter->remove_scripts = false;
+                $wordcounter->remove_html_tags = false;
+                $wordcounter->remove_scripts = false;
 
                 // Load string to analyze
                 $wordcounter->load($data);
@@ -61,17 +63,15 @@ class FileUploadController extends Controller
                 $classnamesraw = $this->get_class_names($data);
 
                 // Split contents in array based on a delimiter (\n)
-                 $classnames = explode("\n ", $classnamesraw);
+                $classnames = explode("\n ", $classnamesraw);
 
                 // Split contents in array based on a delimiter (public function)
                 // $classnames = explode("public function ", $classnamesraw);
-            }
-
-            else {
+            } else {
                 return back();
             }
         }
-        return view('filehandler',compact('data','total','eachWord','methods','classnamesraw','classnames','max_suggested'));
+        return view('filehandler', compact('data', 'total', 'eachWord', 'methods', 'classnamesraw', 'classnames', 'max_suggested'));
     }
 
     public function get_class_names($filename = null) {

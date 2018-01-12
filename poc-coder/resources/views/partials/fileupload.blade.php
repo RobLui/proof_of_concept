@@ -5,16 +5,21 @@
 
         <div class="col-sm-12 form-group">
             <h2>INSTRUCTIONS</h2>
+            {{-- Ja Sam, die < en > zijn ervoor gdn :D --}}
             <div class="form-control text-center">
-                <span>
-                    Upload a JavaScript file to start the checking,
+                <span class="color-black">
+                    Upload a JavaScript/PHP file to start.
                 </span>
-                <span>
-                    beware any other file will not result in a valid orientizer!
+                <span class="color-red"> < </span>
+                <span class="color-black">
+                    Beware, any other file will not result in a valid orientizer!
+                </span>
+                <span class="color-red"> > </span>
                 </span>
             </div>
         </div>
 
+        {{--#1--}}
         <div class="col-sm-12 margin-top-2 margin-bottom-2">
             <h2>STEP 1</h2>
             <label class="btn btn-default col-md-6 col-md-offset-3" for="file-selector">
@@ -23,6 +28,7 @@
             </label>
         </div>
 
+        {{--#2--}}
         <div class="col-sm-12">
             <h2>STEP 2</h2>
             <div class="text-center">

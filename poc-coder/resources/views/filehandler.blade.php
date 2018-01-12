@@ -4,6 +4,9 @@
 
     @include('partials.navigation')
 
+    @include('common.errors')
+    @include('common.messages')
+
     @if(!empty($data))
         <div class="col-sm-12">
         <div class="col-sm-8 full-display full-height col-sm-offset-2">

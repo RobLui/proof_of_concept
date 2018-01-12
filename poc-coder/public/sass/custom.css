@@ -86,8 +86,21 @@ html, body {
   color: black;
   font-weight: 800; }
 
+.orange {
+  background: orange !important;
+  color: black;
+  font-weight: 800; }
+
 .color-white {
   color: #ffffff !important; }
+
+.color-black {
+  color: black;
+  font-weight: 500; }
+
+.color-red {
+  color: red;
+  font-weight: 800; }
 
 .hover:hover {
   color: #FF8300 !important; }

@@ -1,7 +1,10 @@
 <div class="col-sm-6 col-sm-offset-3 margin-top-3 margin-bottom-3 full-height" id="suggestions">
     <h2 class="margin-top-3">SUGGESTIONS</h2>
     <ul class="list-group margin-top-3">
-        {{--SUGGESTIE #1--}}
+
+    {{--OVERALL SUGGESTIONS --}}
+
+        {{--#1--}}
         @if($total > $max_suggested)
             <li class="list-group-item pink">
                 The total amount of words, which is: {{ $total }},
@@ -12,7 +15,23 @@
                 {{--Deze kan je best opsplitsen in meerdere scripts en daarna--}}
             </li>
         @endif
-        {{--SUGGESTIE #2--}}
+        {{--#2--}}
+
+
+    {{--JS SPECIFIC SUGGESTIONS--}}
+        @if(!empty($js_suggestions))
+            <li class="list-group-item pink">
+                    JS
+            </li>
+        @endif
+
+
+    {{--PHP SPECIFIC SUGGESTIONS --}}
+        @if(!empty($php_suggestions))
+            <li class="list-group-item orange">
+                PHP
+            </li>
+        @endif
 
     </ul>
 </div>
