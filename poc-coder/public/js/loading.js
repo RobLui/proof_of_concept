@@ -1,12 +1,7 @@
 $( document ).ready(function() {
 
     $('#checker').click(function(e){
-       e.preventDefault();
        PlayAnimation();
-       setTimeout(
-           function() {
-               $(this).form.submit()
-           }, 2000);
     });
 
     function PlayAnimation() {
@@ -19,7 +14,7 @@ $( document ).ready(function() {
             } else {
                 pos++;
                 elem.style.top = pos + 'px';
-                elem.style.left = pos + 'px';
+                elem.style.bottom = pos + 'px';
             }
         }
     }

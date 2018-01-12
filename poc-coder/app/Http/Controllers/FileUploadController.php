@@ -17,6 +17,8 @@ class FileUploadController extends Controller
 {
     public function handle(Request $req) {
 
+        $max_suggested  = 5000;
+
         if ($req->hasFile('upload-file'))
         {
             // Get the uploaded file out of the request
@@ -69,7 +71,7 @@ class FileUploadController extends Controller
                 return back();
             }
         }
-        return view('filehandler',compact('data','total','eachWord','methods','classnamesraw','classnames'));
+        return view('filehandler',compact('data','total','eachWord','methods','classnamesraw','classnames','max_suggested'));
     }
 
     public function get_class_names($filename = null) {

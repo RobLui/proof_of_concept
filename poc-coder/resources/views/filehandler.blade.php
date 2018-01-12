@@ -30,6 +30,9 @@
             @include('handler.splitted_statistics')
         </div>
 
+        <div class="col-sm-12">
+            @include('handler.suggestions')
+        </div>
         @else
             <div class="margin-top-3">
                 <h2 class="margin-top-6 margin-bottom-3">Input a file on the main page :)</h2>

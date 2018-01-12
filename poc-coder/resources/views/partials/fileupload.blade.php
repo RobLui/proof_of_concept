@@ -6,7 +6,9 @@
         <div class="col-sm-12 form-group">
             <h2>INSTRUCTIONS</h2>
             <div class="form-control text-center">
-                Upload a JavaScript file to start the checking,
+                <span>
+                    Upload a JavaScript file to start the checking,
+                </span>
                 <span>
                     beware any other file will not result in a valid orientizer!
                 </span>
