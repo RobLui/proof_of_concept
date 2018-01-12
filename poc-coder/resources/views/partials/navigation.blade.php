@@ -7,6 +7,7 @@
             <li><a href="#splitted-statistics" class="color-white hover">#splitted-statistics</a></li>
             <li><a href="#splitted-classnames" class="color-white hover">#splitted-classnames</a></li>
             <li><a href="#methods" class="color-white hover">#methods</a></li>
+            <li><a href="#suggestions" class="color-white hover">#suggestions</a></li>
         </ul>
     </div>
 </nav>

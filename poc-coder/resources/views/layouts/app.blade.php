@@ -16,7 +16,6 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
 
     <!-- JS / JQUERY -->
-    <script src="{{ asset('js/custom.js') }}"></script>
 
 </head>
 
@@ -38,7 +37,6 @@
         </div>
 
     </div>
-<script src="{{ asset('js/custom.js') }}"></script>
 </body>
 
 </html>
