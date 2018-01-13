@@ -1,5 +1,5 @@
 {{-- DETAILS FROM FILE CONTENTS --}}
-<div class="col-sm-6 col-sm-offset-3 margin-top-3 margin-bottom-3 full-height" id="splitted-statistics">
+<div class="col-sm-8 col-sm-offset-2 margin-top-3 margin-bottom-3 full-height" id="splitted-statistics">
     <h2 class="margin-top-3">SPLITTED STATISTICS</h2>
     <ul class="list-group margin-top-3">
         <li class="list-group-item pink">Totaal amount of words: {{ $total }}</li>

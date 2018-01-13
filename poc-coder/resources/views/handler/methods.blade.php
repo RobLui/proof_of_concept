@@ -1,9 +1,11 @@
-<div class="col-sm-12 full-display full-height" id="methods">
+<div class="col-sm-12 full-display full-height margin-top-2" id="methods">
     {{-- METHODS --}}
-    <h2 class="margin-top-3">(INHERITED) METHODS</h2>
+    <h2 class="margin-top-3 margin-bottom-2">(INHERITED) METHODS</h2>
     @if(!empty($methods))
         @foreach($methods as $m)
-            <p> {{ $m }} </p>
+            <div class="col-sm-4">
+                <p> {{ $m }} </p>
+            </div>
         @endforeach
     @endif
 </div>
