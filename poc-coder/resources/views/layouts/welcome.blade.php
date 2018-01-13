@@ -19,6 +19,10 @@
         <script src="{{ asset('js/custom.js') }}"></script>
         <script src="{{ asset('js/loading.js') }}"></script>
 
+        <!-- FAVICON -->
+        <link rel="icon" href="{{ asset('oo-logo.png') }}" type="image/x-icon"/>
+        <link rel="shortcut icon" href="{{ asset('oo-logo.png') }}" type="image/x-icon"/>
+
     </head>
     <body>
         <div class="flex-center position-ref full-height">

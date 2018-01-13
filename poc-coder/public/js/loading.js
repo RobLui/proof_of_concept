@@ -7,9 +7,9 @@ $( document ).ready(function() {
     function PlayAnimation() {
         var elem = document.getElementById("checker");
         var pos = 0;
-        var id = setInterval(frame, 5);
+        var id = setInterval(frame, 0.1);
         function frame() {
-            if (pos == 350) {
+            if (pos == 1000) {
                 clearInterval(id);
             } else {
                 pos++;
