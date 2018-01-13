@@ -16,8 +16,15 @@ https://matthewdaly.co.uk/blog/2017/03/15/enforcing-a-coding-standard-with-php-c
 https://dev.to/gonedark/a-month-of-clean-code-tips-709
 https://dev.to/gonedark/writing-clean-code-part-2-9fn
 
-# WORDPRESS ACCOUNT MADE + SETUP FOR PLUGINS TO DOWNLOAD (SINCE WP ISN'T OBJECT ORIENTED?)
+## WORDPRESS ACCOUNT MADE + SETUP FOR PLUGINS TO DOWNLOAD (SINCE WP ISN'T OBJECT ORIENTED?)
 https://poclocal.wordpress.com/
 -> FAIL ! You cannot download wordpress plugins on a free tier. L0L.
 
-# 
+## JS SPECIFIC CODE STYLE [ THE RIGHT WAY ]
+http://jstherightway.org/#js-code-style
+
+## RANDOM FUN LINUX COMMANDS WHILE SEARCHING OOP STUFF :)
+https://www.tecmint.com/20-funny-commands-of-linux-or-linux-is-fun-in-terminal/
+
+## PERSISTENCE IN JS CODE GITHUB LAYOUT
+https://github.com/rwaldron/idiomatic.js
