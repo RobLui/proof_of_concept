@@ -6,11 +6,14 @@ use function back;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Session;
 use Malahierba\WordCounter\WordCounter;
 use function compact;
 use function explode;
 use function get_class_methods;
 use function get_declared_classes;
+use function redirect;
 use function view;
 
 class FileUploadController extends Controller
@@ -67,8 +70,10 @@ class FileUploadController extends Controller
 
                 // Split contents in array based on a delimiter (public function)
                 // $classnames = explode("public function ", $classnamesraw);
-            } else {
-                return back();
+            }
+            else {
+                Session::flash('error', 'Please use a different kind of file! [either JS or PHP] ');
+                return Redirect::back();
             }
         }
         return view('filehandler', compact('data', 'total', 'eachWord', 'methods', 'classnamesraw', 'classnames', 'max_suggested'));
