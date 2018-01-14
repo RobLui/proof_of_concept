@@ -15,8 +15,9 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('sass/custom.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
 
-    <!-- JS / JQUERY -->
-
+    <!-- FAVICON -->
+    <link rel="icon" href="{{ asset('oo-logo.png') }}" type="image/x-icon"/>
+    <link rel="shortcut icon" href="{{ asset('oo-logo.png') }}" type="image/x-icon"/>
 </head>
 
 <body>

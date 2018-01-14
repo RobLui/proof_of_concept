@@ -6,7 +6,7 @@
         <div class="col-sm-12 form-group">
             <h2>INSTRUCTIONS</h2>
             {{-- Ja Sam, die < en > zijn ervoor gdn :D --}}
-            <div class="form-control text-center">
+            <div class="text-center">
                 <span class="color-black">
                     Upload a JavaScript/PHP file to start.
                 </span>
