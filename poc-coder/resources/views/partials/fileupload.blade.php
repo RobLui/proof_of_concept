@@ -3,7 +3,7 @@
 
 <div id="hide-checker" class="text-center margin-top-3">
 
-    {!!  Form::open(['route' => 'filehandler','method' => 'post', 'files' => true]) !!}
+    {!!  Form::open(['route' => 'filehandler', 'files' => true]) !!}
 
         <div class="col-sm-12 form-group">
             <h2>INSTRUCTIONS</h2>
@@ -37,6 +37,7 @@
                 {{ Form::submit('Start Checker', array('class' => 'col-md-6 col-md-offset-3 btn btn-success', 'id' => 'checker')) }}
             </div>
         </div>
+        {{ csrf_field() }}
 
     {!! Form::close() !!}
 

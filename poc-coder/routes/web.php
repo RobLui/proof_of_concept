@@ -21,11 +21,11 @@
 
 // FILE CONTENT HANDLING
 
-    Route::post('/filehandler', 'FileUploadController@handle')
+    Route::get('/filehandler', 'FileUploadController@handle')
     ->name('filehandler')
     ;
 
-    Route::get('/filehandler', 'FileUploadController@handle')
+    Route::post('filehandler', 'FileUploadController@handle')
     ->name('filehandler')
     ;
 
