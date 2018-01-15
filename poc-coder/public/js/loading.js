@@ -5,6 +5,8 @@ $( document ).ready(function() {
         e.preventDefault();
         PlayAnimation();
         $('#load_animation').removeClass('hidden');
+        $('.remove-on-check').addClass('hidden');
+        $('.t').addClass('loading-text');
 
         // rebind the event to the form :) werkend! (na x seconden)
         setTimeout(function () {

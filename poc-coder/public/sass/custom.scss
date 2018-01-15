@@ -191,5 +191,28 @@ html, body {
 
 .changer {
   color: $pink !important;
-  font-size: 9em;
+  font-size: 12em;
+}
+
+.loading-text::before {
+  margin-top: 2em;
+  content:' ';
+  animation: change-loading-text 5s;
+}
+
+@keyframes change-loading-text {
+  0% {
+    content: "Chopping away your code!";
+    font-weight: 500;
+    color: black;
+  }
+  50% {
+    opacity: 0;
+    color: white;
+  }
+  100% {
+    color: black;
+    font-weight: 500;
+    content: "Nah joke, just trying to see what OOP stuff optimization I can provide you..";
+  }
 }
