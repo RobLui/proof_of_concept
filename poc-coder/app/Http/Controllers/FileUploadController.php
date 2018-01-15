@@ -44,7 +44,7 @@ class FileUploadController extends Controller
 
                     // dd($extension);
 
-                    if ($filesize < $max_suggested && ($extension == 'js' || $extension == 'php')) {
+                    if (($extension == 'js' || $extension == 'php')) {
 
                         // Define the uploaded file
                         $contents = $req->file('upload-file');
