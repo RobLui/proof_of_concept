@@ -2,18 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use function back;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Validator;
 use Malahierba\WordCounter\WordCounter;
 use function compact;
 use function explode;
 use function get_class_methods;
 use function get_declared_classes;
-use function redirect;
 use function view;
 
 class FileUploadController extends Controller
@@ -21,68 +20,78 @@ class FileUploadController extends Controller
     public function handle(Request $req)
     {
 
+        $rules = [
+            'upload-file' => 'required'
+        ];
+
+        $validator = Validator::make($req->all(),$rules);
+
         $max_suggested = 5000;
 
-        if ($req->hasFile('upload-file')) {
-            // Get the uploaded file out of the request
-            $uploadedfile = $req->file('upload-file');
+        if ($validator) {
 
-            // Get the file size
-            $filesize = $uploadedfile->getSize();
+            if ($req->hasFile('upload-file')) {
+                // Get the uploaded file out of the request
+                $uploadedfile = $req->file('upload-file');
 
-            // Get the file extension (php,js,..)
-            $extension = $uploadedfile->getClientOriginalExtension();
+                // Get the file size
+                $filesize = $uploadedfile->getSize();
 
-            // dd($extension);
+                // Get the file extension (php,js,..)
+                $extension = $uploadedfile->getClientOriginalExtension();
 
-            if ($filesize < $max_suggested * 2 && ($extension == 'js' || $extension = 'php')) {
+                // dd($extension);
 
-                // Define the uploaded file
-                $contents = Input::file('upload-file');
+                if ($filesize < $max_suggested && ($extension == 'js' || $extension == 'php')) {
 
-                // Get the content from the uploaded file
-                $data = File::get($contents);
+                    // Define the uploaded file
+                    $contents = Input::file('upload-file');
 
-                // Init new wordCounter
-                $wordcounter = new WordCounter();
+                    // Get the content from the uploaded file
+                    $data = File::get($contents);
 
-                // Edited standard config protected to public to unset true's, enabling for code checking words
-                $wordcounter->remove_html_tags = false;
-                $wordcounter->remove_scripts = false;
+                    // Init new wordCounter
+                    $wordcounter = new WordCounter();
 
-                // Load string to analyze
-                $wordcounter->load($data);
+                    // Edited standard config protected to public to unset true's, enabling for code checking words
+                    $wordcounter->remove_html_tags = false;
+                    $wordcounter->remove_scripts = false;
 
-                // Count all words inside the file (analyzed string)
-                $total = $wordcounter->countTotalWords();
+                    // Load string to analyze
+                    $wordcounter->load($data);
 
-                // Count each word, you receive an array with objects: -> word en -> count
-                $eachWord = $wordcounter->countEachWord();
+                    // Count all words inside the file (analyzed string)
+                    $total = $wordcounter->countTotalWords();
 
-                // Get the defined functions from the uploaded file
-                $methods = $this->get_methods($uploadedfile);
+                    // Count each word, you receive an array with objects: -> word en -> count
+                    $eachWord = $wordcounter->countEachWord();
 
-                // Get the defined class names from within the uploaded file
-                $classnamesraw = $this->get_class_names($data);
+                    // Get the defined functions from the uploaded file
+                    $methods = $this->get_methods($uploadedfile);
 
-                // Split contents in array based on a delimiter (\n)
-                $classnames = explode("\n ", $classnamesraw);
+                    // Get the defined class names from within the uploaded file
+                    $classnamesraw = $this->get_class_names($data);
 
-                // Split contents in array based on a delimiter (public function)
-                // $classnames = explode("public function ", $classnamesraw);
-            }
-            else {
-                Session::flash('error', 'Please use a different kind of file! [either JS or PHP] ');
-                return Redirect::back();
+                    // Split contents in array based on a delimiter (\n)
+                    $classnames = explode("\n ", $classnamesraw);
+
+                    // Split contents in array based on a delimiter (public function)
+                    // $classnames = explode("public function ", $classnamesraw);
+                }
+                else {
+                    Session::flash('error', 'Please use a different kind of file! JS or PHP should work! ;) ');
+                    return Redirect::back();
+                }
             }
         }
         return view('filehandler', compact('data', 'total', 'eachWord', 'methods', 'classnamesraw', 'classnames', 'max_suggested'));
     }
 
-    public function get_class_names($filename = null) {
+    public function get_class_names($filename = null)
+    {
 
         // Return the text in a compact format
-        $classes = $filename.implode(get_declared_classes())[0];
+        $classes = $filename . implode(get_declared_classes())[0];
 
         // dd($classes);
         return $classes;

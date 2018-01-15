@@ -1,4 +1,4 @@
-<div class="col-sm-12 full-display full-height" id="splitted-classnames">
+<div class="col-sm-12 margin-top-3 text-center" id="splitted-classnames">
     {{-- NAMES --}}
     <h2 class="margin-top-3 margin-bottom-2">SPLITTED CLASSNAMES</h2>
     @if(!empty($classnames))

@@ -4,33 +4,38 @@
 
     {{--OVERALL SUGGESTIONS --}}
 
-        {{--#1--}}
-        @if($total > $max_suggested)
-            <li class="list-group-item pink">
-                The total amount of words, which is: {{ $total }},
-                is far above the maximum suggested amount that you'd want in a script.
-                Consider splitting these up, or try using functions for multiple purposes.
-                {{--Het totaal aantal woorden, namelijk {{ $total }},--}}
-                {{--ligt ver boven de maximaal aangerade hoeveelheid die je in een script wil staan hebben.--}}
-                {{--Deze kan je best opsplitsen in meerdere scripts en daarna--}}
-            </li>
-        @endif
-        {{--#2--}}
+        @if(empty($js_suggestions) && empty($php_suggestions))
+                <p>Nope! No suggestions for an awesome looking file :)! Well done, keep coding OOP style :)!</p>
+            @else
+            {{--#1--}}
+            @if($total > $max_suggested)
+                <li class="list-group-item pink">
+                    The total amount of words, which is: {{ $total }},
+                    is far above the maximum suggested amount that you'd want in a script.
+                    Consider splitting these up, or try using functions for multiple purposes.
+                    {{--Het totaal aantal woorden, namelijk {{ $total }},--}}
+                    {{--ligt ver boven de maximaal aangerade hoeveelheid die je in een script wil staan hebben.--}}
+                    {{--Deze kan je best opsplitsen in meerdere scripts en daarna--}}
+                </li>
+            @endif
+            {{--#2--}}
 
 
-    {{--JS SPECIFIC SUGGESTIONS--}}
-        @if(!empty($js_suggestions))
-            <li class="list-group-item pink">
-                    JS
-            </li>
-        @endif
+        {{--JS SPECIFIC SUGGESTIONS--}}
+            @if(!empty($js_suggestions))
+                <li class="list-group-item pink">
+                        JS
+                </li>
+            @endif
 
 
-    {{--PHP SPECIFIC SUGGESTIONS --}}
-        @if(!empty($php_suggestions))
-            <li class="list-group-item orange">
-                PHP
-            </li>
+        {{--PHP SPECIFIC SUGGESTIONS --}}
+            @if(!empty($php_suggestions))
+                <li class="list-group-item orange">
+                    PHP
+                </li>
+            @endif
+
         @endif
 
     </ul>

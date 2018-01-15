@@ -1,3 +1,5 @@
+@include('common.errors')
+@include('common.messages')
 
 <div id="hide-checker" class="text-center margin-top-3">
 

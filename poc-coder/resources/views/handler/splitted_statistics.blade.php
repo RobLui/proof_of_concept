@@ -4,7 +4,7 @@
     <ul class="list-group margin-top-3">
         <li class="list-group-item pink">Totaal amount of words: {{ $total }}</li>
         @foreach($eachWord as $item)
-            <li class="col-sm-4 list-group-item {{ $item->count > 2 ? 'green' : 'blue'  }}">{{ $item->word }} = <span>{{ $item->count }} times</span></li>
+            <li class="col-sm-4 list-group-item {{ $item->count > 4 ? 'green' : 'blue'  }}">{{ $item->word }} = <span>{{ $item->count }} time{{ $item->count > 1 ? 's' : ''  }}</span></li>
         @endforeach
     </ul>
 </div>

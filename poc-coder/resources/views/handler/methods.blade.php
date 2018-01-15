@@ -1,4 +1,4 @@
-<div class="col-sm-12 full-display full-height margin-top-2" id="methods">
+<div class="col-sm-12 margin-top-3 text-center" id="methods">
     {{-- METHODS --}}
     <h2 class="margin-top-3 margin-bottom-2">(INHERITED) METHODS</h2>
     @if(!empty($methods))
