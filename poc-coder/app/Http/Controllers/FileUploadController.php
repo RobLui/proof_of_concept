@@ -23,6 +23,7 @@ class FileUploadController extends Controller
         if($req->isMethod('POST'))
         {
             $php_suggestions = array();
+            $js_suggestions = array();
 
             $rules = [
                 'upload-file' => 'required'
@@ -76,18 +77,25 @@ class FileUploadController extends Controller
                         // Split contents in array based on a delimiter (\n)
                         $classnames = explode("\n ", $classnamesraw);
 
-                        $classes = explode("‰class‰", $classnamesraw);
+                        // Count 'this' usage
+                        $this_usage = explode("%this%", $classnamesraw);
 
+                        $classes = explode("‰class‰", $classnamesraw);
+                        // dd($classes);
+
+                        // Split on classes (check for multiple classes in 1 php file)
                         if(count($classes) > 1 && $extension == 'php')
                         {
-                            $php_suggestions['php'] = 'Try providing 1 classname per php file.';
+                            $php_suggestions['php'] = 'Try providing 1 class per php file.';
+                        }
+
+                        if(count($this_usage) <= 1 && $extension == 'js')
+                        {
+                            $js_suggestions['js'] = "Try using 'this.' more often than you do now!" ;
                         }
 
                         // Split contents in array based on a delimiter (functions)
                         $functions = explode("function", $classnamesraw);
-
-                        // Split contents in array based on a delimiter (public function)
-                        // $classnames = explode("public function ", $classnamesraw);
                     }
                     else {
                         Session::flash('error', ('Please use a different kind of file! JS or PHP should work!'));
@@ -97,7 +105,7 @@ class FileUploadController extends Controller
             }
             return view('filehandler', compact(
                 'data', 'total', 'eachWord', 'methods',
-                'classnamesraw', 'classnames', 'max_suggested','functions','php_suggestions'
+                'classnamesraw', 'classnames', 'max_suggested','functions','php_suggestions','js_suggestions'
             ));
         }
     }
