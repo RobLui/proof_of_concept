@@ -79,7 +79,7 @@ class FileUploadController extends Controller
                     // $classnames = explode("public function ", $classnamesraw);
                 }
                 else {
-                    Session::flash('error', 'Please use a different kind of file! JS or PHP should work! ;) ');
+                    Session::flash('error', ('Please use a different kind of file! JS or PHP should work.'));
                     return Redirect::back();
                 }
             }

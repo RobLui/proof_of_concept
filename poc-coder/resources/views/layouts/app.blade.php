@@ -11,6 +11,9 @@
     <!-- FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
+    <!-- EMOJI'S -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="{{ asset('sass/custom.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">

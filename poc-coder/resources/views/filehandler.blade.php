@@ -41,9 +41,7 @@
                 @include('handler.methods')
             </div>
 
-
-
-            <div class="col-sm-12">
+            <div class="col-sm-12 full-height">
                 @include('handler.suggestions')
             </div>
         </div>
