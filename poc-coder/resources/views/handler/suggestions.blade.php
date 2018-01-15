@@ -23,9 +23,14 @@
 
         {{--JS SPECIFIC SUGGESTIONS--}}
             @if(!empty($js_suggestions))
-                <li class="list-group-item pink">
-                        JS
+                <li class="list-group-item orange">
+                    JS
                 </li>
+                @foreach($js_suggestions as $suggestion)
+                    <li class="list-group-item">
+                        <span class="color-black"> {{ $suggestion }}</span>
+                    </li>
+                @endforeach
             @endif
 
 
@@ -34,6 +39,11 @@
                 <li class="list-group-item orange">
                     PHP
                 </li>
+                @foreach($php_suggestions as $suggestion)
+                <li class="list-group-item">
+                   <span class="color-black"> {{ $suggestion }}</span>
+                </li>
+                @endforeach
             @endif
 
         @endif

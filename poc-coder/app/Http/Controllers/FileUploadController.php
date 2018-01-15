@@ -22,6 +22,8 @@ class FileUploadController extends Controller
 
         if($req->isMethod('POST'))
         {
+            $php_suggestions = array();
+
             $rules = [
                 'upload-file' => 'required'
             ];
@@ -74,8 +76,15 @@ class FileUploadController extends Controller
                         // Split contents in array based on a delimiter (\n)
                         $classnames = explode("\n ", $classnamesraw);
 
+                        $classes = explode("‰class‰", $classnamesraw);
+
+                        if(count($classes) > 1 && $extension == 'php')
+                        {
+                            $php_suggestions['php'] = 'Try providing 1 classname per php file.';
+                        }
+
                         // Split contents in array based on a delimiter (functions)
-                        $functions = explode("function ", $classnamesraw);
+                        $functions = explode("function", $classnamesraw);
 
                         // Split contents in array based on a delimiter (public function)
                         // $classnames = explode("public function ", $classnamesraw);
@@ -88,7 +97,7 @@ class FileUploadController extends Controller
             }
             return view('filehandler', compact(
                 'data', 'total', 'eachWord', 'methods',
-                'classnamesraw', 'classnames', 'max_suggested','functions'
+                'classnamesraw', 'classnames', 'max_suggested','functions','php_suggestions'
             ));
         }
     }

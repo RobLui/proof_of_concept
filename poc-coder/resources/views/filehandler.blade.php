@@ -30,6 +30,7 @@
                 </div>
 
             <div class="col-sm-12 full-height"></div>
+            <div class="col-sm-12 full-height"></div>
 
                 <div class="col-sm-10 col-sm-offset-1">
                     @include('handler.splitted_classnames')

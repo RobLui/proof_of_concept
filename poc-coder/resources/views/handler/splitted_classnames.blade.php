@@ -1,6 +1,6 @@
 <div class="col-sm-12 margin-top-3 text-center" id="splitted-classnames">
     {{-- NAMES --}}
-    <h2 class="margin-top-3 margin-bottom-2">SPLITTED CLASSNAMES</h2>
+    <h2 class="margin-top-3 margin-bottom-2">SPLITTED CLASSNAMES CONTENTS</h2>
     @if(!empty($classnames))
 
         {{-- SET VARIABLE + HIDE IT --}}
