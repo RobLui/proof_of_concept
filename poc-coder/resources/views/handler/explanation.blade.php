@@ -6,8 +6,8 @@
     <div class="col-sm-12 margin-top-3">
 
         <div class="col-sm-4 col-sm-offset-2 bg-info margin-top-2 height-30 a">
-            <h5 class="color-black">RAW CLASSNAMES</h5>
-            <p>Gives back the raw classnames from the file you've uploaded.</p>
+            <h5 class="color-black">FUNCTIONS</h5>
+            <p>Gives back the functions without name-distraction from the file you've uploaded.</p>
         </div>
 
         <div class="col-sm-4 col-sm-offset-0 bg-primary margin-top-2 height-30 a">

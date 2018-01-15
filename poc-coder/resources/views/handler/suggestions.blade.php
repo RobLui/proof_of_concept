@@ -1,11 +1,11 @@
-<div class="col-sm-6 col-sm-offset-3 margin-top-3 margin-bottom-3 full-height" id="suggestions">
+<div class="col-sm-8 col-sm-offset-2 margin-top-3 margin-bottom-3 full-height" id="suggestions">
     <h2 class="margin-top-3">SUGGESTIONS</h2>
     <ul class="list-group margin-top-3">
 
     {{--OVERALL SUGGESTIONS --}}
 
         @if(empty($js_suggestions) && empty($php_suggestions))
-                <p>Nope! No suggestions for an awesome looking file :)! Well done, keep coding OOP style :)!</p>
+                <h4>Nope! No suggestions for an awesome looking file :)! Well done, keep coding OOP style :)!</h4>
             @else
             {{--#1--}}
             @if($total > $max_suggested)

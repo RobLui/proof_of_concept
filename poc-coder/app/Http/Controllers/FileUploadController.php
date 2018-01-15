@@ -45,6 +45,7 @@ class FileUploadController extends Controller
 
                         // Define the uploaded file
                         $contents = $req->file('upload-file');
+
                         // Get the content from the uploaded file
                         $data = File::get($contents);
 
@@ -73,6 +74,9 @@ class FileUploadController extends Controller
                         // Split contents in array based on a delimiter (\n)
                         $classnames = explode("\n ", $classnamesraw);
 
+                        // Split contents in array based on a delimiter (functions)
+                        $functions = explode("function ", $classnamesraw);
+
                         // Split contents in array based on a delimiter (public function)
                         // $classnames = explode("public function ", $classnamesraw);
                     }
@@ -82,7 +86,10 @@ class FileUploadController extends Controller
                     }
                 }
             }
-        return view('filehandler', compact('data', 'total', 'eachWord', 'methods', 'classnamesraw', 'classnames', 'max_suggested'));
+            return view('filehandler', compact(
+                'data', 'total', 'eachWord', 'methods',
+                'classnamesraw', 'classnames', 'max_suggested','functions'
+            ));
         }
     }
 

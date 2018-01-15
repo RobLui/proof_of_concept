@@ -4,7 +4,7 @@
             <li><a href="{{ route('welcome') }}" class="color-white hover left logo-img"><img src="{{asset('oo-logo.png')}}" alt="logo"></a></li>
             <li><a href="{{ route('welcome') }}" class="color-white hover left">Home</a></li>
             <li><a href="#explanation" class="color-white hover">#explanation</a></li>
-            <li><a href="#raw-classnames" class="color-white hover">#raw-classnames</a></li>
+            <li><a href="#functions" class="color-white hover">#functions</a></li>
             <li><a href="#raw-content" class="color-white hover">#raw-content</a></li>
             <li><a href="#splitted-statistics" class="color-white hover">#splitted-statistics</a></li>
             <li><a href="#splitted-classnames" class="color-white hover">#splitted-classnames</a></li>
