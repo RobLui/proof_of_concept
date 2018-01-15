@@ -1,4 +1,5 @@
 $( document ).ready(function() {
+    var time = 7000;
 
     $('#checker').click(function(e){
 
@@ -12,7 +13,7 @@ $( document ).ready(function() {
         setTimeout(function () {
             console.log("test")
             $('#checker').unbind('click').click();
-        }, 5000);
+        }, time);
     });
 
     function PlayAnimation() {

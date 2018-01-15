@@ -1,7 +1,7 @@
 @include('common.errors')
 @include('common.messages')
 
-<div id="hide-checker" class="text-center margin-top-3">
+<div id="hide-checker" class="text-center margin-top-2">
 
     {!!  Form::open(['route' => 'filehandler', 'files' => true]) !!}
 
@@ -43,15 +43,17 @@
     {!! Form::close() !!}
 </div>
 
+{{--ANIMATION STUFF--}}
+<div class="col-sm-12">
 
+    <div class="block margin-bottom-3">
+        <div id="load_animation" class="ld ld-hourglass ld-spin-fast changer hidden">
+        </div>
+    </div>
 
-<div id="load_animation" class="ld ld-hourglass ld-spin-fast changer hidden">
-
-
-</div>
-
-
-
-<div class="t">
+    <div class="block margin-top-3">
+        <div class="t">
+        </div>
+    </div>
 
 </div>

@@ -143,8 +143,9 @@ html, body {
 
 .loading-text::before {
   margin-top: 2em;
-  content: ' ';
-  animation: change-loading-text 5s; }
+  font-size: 2em;
+  content: '';
+  animation: change-loading-text 7.5s; }
 
 @keyframes change-loading-text {
   0% {
@@ -155,8 +156,8 @@ html, body {
     opacity: 0;
     color: white; }
   100% {
+    content: "Nah joke, just optimizing for you..";
     color: black;
-    font-weight: 500;
-    content: "Nah joke, just trying to see what OOP stuff optimization I can provide you.."; } }
+    font-weight: 500; } }
 
 /*# sourceMappingURL=custom.css.map */
