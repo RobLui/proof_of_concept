@@ -82,8 +82,8 @@ class FileUploadController extends Controller
                     }
                 }
             }
-        }
         return view('filehandler', compact('data', 'total', 'eachWord', 'methods', 'classnamesraw', 'classnames', 'max_suggested'));
+        }
     }
 
     public function get_class_names($filename = null)

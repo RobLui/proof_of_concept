@@ -13,6 +13,7 @@
         <!-- CSS -->
         <link rel="stylesheet" type="text/css" href="{{ asset('sass/custom.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/loading.css') }}">
 
         <!-- SCRIPTS -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -49,7 +50,6 @@
 
                 @include('partials.fileupload')
             </div>
-
         </div>
     </body>
 </html>

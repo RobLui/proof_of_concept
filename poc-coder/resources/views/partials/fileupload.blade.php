@@ -5,6 +5,8 @@
 
     {!!  Form::open(['route' => 'filehandler', 'files' => true]) !!}
 
+        {{ csrf_field() }}
+
         <div class="col-sm-12 form-group">
             <h2>INSTRUCTIONS</h2>
             {{-- Ja Sam, die < en > zijn ervoor gdn :D --}}
@@ -37,8 +39,12 @@
                 {{ Form::submit('Start Checker', array('class' => 'col-md-6 col-md-offset-3 btn btn-success', 'id' => 'checker')) }}
             </div>
         </div>
-        {{ csrf_field() }}
 
     {!! Form::close() !!}
 
+
 </div>
+
+<div class="ld ld-hourglass ld-spin-fast changer"></div>
+
+

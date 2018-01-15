@@ -17,6 +17,7 @@
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="{{ asset('sass/custom.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/loading.css') }}">
 
     <!-- FAVICON -->
     <link rel="icon" href="{{ asset('oo-logo.png') }}" type="image/x-icon"/>
@@ -41,6 +42,7 @@
         </div>
 
     </div>
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-68616424-6"></script>
     <script>
