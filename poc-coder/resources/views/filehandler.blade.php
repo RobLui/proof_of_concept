@@ -10,7 +10,7 @@
     @if(!empty($data))
         <div class="col-sm-12">
 
-            <div class="col-sm-12 full-height text-left">
+            <div class="col-sm-12 full-height">
                 @include('handler.explanation')
             </div>
             <div class="col-sm-10 full-height col-sm-offset-1">

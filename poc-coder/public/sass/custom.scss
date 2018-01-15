@@ -172,8 +172,9 @@ html, body {
 
 .height-30  {
   h5, p {
-    margin-top:1em;
-    margin-bottom:1em;
+    display: block;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
   }
   p {
     height: 4em;
@@ -199,11 +200,12 @@ html, body {
   font-size: 2em;
   content: '';
   animation: change-loading-text 7.5s;
+  display: inline;
 }
 
 @keyframes change-loading-text {
   0% {
-    content: "Chopping away your code!";
+    content: "Chopping away your code ! ";
     font-weight: 500;
     color: black;
   }
@@ -212,8 +214,14 @@ html, body {
     color: white;
   }
   100% {
-    content: "Nah joke, just optimizing for you..";
+    content: "Nah joke, just trying to optimize it .. ";
     color: black;
     font-weight: 500;
+  }
+}
+
+.logo-img {
+  img {
+    height: 2em;
   }
 }

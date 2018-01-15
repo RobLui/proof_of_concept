@@ -1,6 +1,7 @@
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid navbar-inverse">
         <ul class="nav navbar-nav">
+            <li><a href="{{ route('welcome') }}" class="color-white hover left logo-img"><img src="{{asset('oo-logo.png')}}" alt="logo"></a></li>
             <li><a href="{{ route('welcome') }}" class="color-white hover left">Home</a></li>
             <li><a href="#explanation" class="color-white hover">#explanation</a></li>
             <li><a href="#raw-classnames" class="color-white hover">#raw-classnames</a></li>
