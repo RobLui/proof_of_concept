@@ -1,7 +1,16 @@
 $( document ).ready(function() {
 
     $('#checker').click(function(e){
-       PlayAnimation();
+
+        e.preventDefault();
+        PlayAnimation();
+        $('#load_animation').removeClass('hidden');
+
+        // rebind the event to the form :) werkend! (na x seconden)
+        setTimeout(function () {
+            console.log("test")
+            $('#checker').unbind('click').click();
+        }, 5000);
     });
 
     function PlayAnimation() {

@@ -45,6 +45,6 @@
 
 </div>
 
-<div class="ld ld-hourglass ld-spin-fast changer"></div>
+<div id="load_animation" class="ld ld-hourglass ld-spin-fast changer hidden"></div>
 
 
